@@ -32,7 +32,7 @@ const Company = compose(
     name: string(),
     year: int()
   })
-)(function() {});
+)();
 ```
 
 ## Contributors
