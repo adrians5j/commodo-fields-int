@@ -1,11 +1,11 @@
-import { number } from "@commodo/fields/fields";
+import { int } from "commodo-fields-int";
 import { withFields, WithFieldsError } from "@commodo/fields";
 
 import { compose } from "ramda";
 
-const Model = compose(withFields({ attribute: number({ list: true }) }))();
+const Model = compose(withFields({ attribute: int({ list: true }) }))();
 
-test("should accept number values", () => {
+test("should accept int values", () => {
     const model = new Model();
 
     model.attribute = [5];
@@ -14,8 +14,8 @@ test("should accept number values", () => {
     model.attribute = [0];
     expect(model.attribute).toEqual([0]);
 
-    model.attribute = [0.5];
-    expect(model.attribute).toEqual([0.5]);
+    model.attribute = [1];
+    expect(model.attribute).toEqual([1]);
 
     model.attribute = [99999999];
     expect(model.attribute).toEqual([99999999]);
@@ -27,8 +27,20 @@ test("should accept number values", () => {
     expect(model.attribute).toEqual([undefined]);
 });
 
-[["1"], ["0"], ["0.5"], [{}], [[]], [true], [false], [Infinity], [-Infinity]].forEach(value => {
-    test(`number field shouldn't accept array of ${typeof value[0]}s`, async () => {
+[
+    [1.5],
+    ["1"],
+    ["0"],
+    ["0.5"],
+    [{}],
+    [[]],
+    [1, 2, 3, 4.5],
+    [true],
+    [false],
+    [Infinity],
+    [-Infinity]
+].forEach(value => {
+    test(`int field shouldn't accept array of ${typeof value[0]}s`, async () => {
         const model = new Model();
 
         let error = null;
