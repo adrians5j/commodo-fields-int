@@ -29,10 +29,8 @@ import { int } from "commodo-fields-int";
 const Company = compose(
   withFields({
     name: string(),
-    // Use it to store a single integer value...
-    age: int(), 
-    // ...or a list of integer values.
-    topYears: int({ list: true })
+    age: int(), // Use it to store a single integer value.
+    topYears: int({ list: true }) // Or a list of integer values.
     // Other fields you might need...
   }),
   // Other higher order functions (HOFs) you might need...
