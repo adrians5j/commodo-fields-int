@@ -45,6 +45,7 @@ company.topYears = [2000, 2005, 2010];
 
 // The following will throw the WithFieldsError error.
 company.age =  "17";
+company.age =  16.2;
 company.topYears = [2000, "2005", 2010];
 ```
 
