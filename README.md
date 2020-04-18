@@ -30,7 +30,7 @@ const Company = compose(
   withFields({
     name: string(),
     age: int(), // Use it to store a single integer value.
-    topYears: int({ list: true }) // Or a list of integer values.
+    topYears: int({ list: true }) // Or use it to store a list of integer values.
     // Other fields you might need...
   }),
   // Other higher order functions (HOFs) you might need...
