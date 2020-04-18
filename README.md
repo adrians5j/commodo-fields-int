@@ -45,6 +45,7 @@ company.topYears = [2000, 2005, 2010];
 
 // The following will throw the WithFieldsError error.
 company.age =  "17";
+company.topYears = [2000, "2005", 2010];
 ```
 
 Note: of course, you can also use the [`populate`](https://github.com/webiny/commodo/tree/master/packages/fields#populatedata-object-void) method to assign the data:
