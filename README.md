@@ -7,7 +7,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
   
-A simple integer field for the [Commodo](https://github.com/webiny/commodo) library. 
+A simple integer field, used with the [Commodo / withFields](https://github.com/webiny/commodo) higher order function (HOF). 
 
 ## Install
 ```
